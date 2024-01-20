@@ -6,7 +6,7 @@ EXTENSION POWERSHELL_TO_DROPBOX
     REM Target: Windows 10, 11
     REM Version: 1.0
 
-    REM For usage instructions look at https://github.com/PlumpyTurkey/Ducky-Utilities-Indev/tree/main/Extensions/PowerShell_To_Dropbox
+    REM For usage instructions look at https://github.com/PlumpyTurkey/Ducky-Utilities/tree/main/Extensions/PowerShell-To-Dropbox
 
     DEFINE REFRESH_TOKEN XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     DEFINE APP_KEY XXXXXXXXXXXXXXX
