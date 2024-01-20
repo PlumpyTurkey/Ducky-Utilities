@@ -2,7 +2,7 @@ REM Title: Windows Product Duckey
 REM Author: PlumpyTurkey (formerly Who-Is-Julien)
 REM Description: This payload exfiltrate the target's Windows product key to a remote server.
 REM Target: Windows 10, 11
-REM Version: 1.0
+REM Version: 1.0.1
 REM Category: Exfiltration
 
 DEFINE REMOTE_IP_ADDRESS 192.168.1.10
